@@ -1,5 +1,7 @@
 #include <iostream>
-
+#include <fstream>
+void GetAccountInfo(string& netid, string& password, string& firstName, string& lastName);
+int LogIn(string netid, string password);
 using namespace std;
 
 class User {
@@ -44,4 +46,35 @@ int main() {
 //    User usr;
 //    usr.printInfo();
     return 0;
+}
+
+int LogIn(string netid, string password)
+{
+    string enterednetid, enteredpassword;
+    bool loop = true;
+    bool login;
+    while (loop == true)
+    {
+        cout << "Enter NetID" << endl;
+        cin >> enterednetid;
+        cout << "Enter password" << endl;
+        cin >> enteredpassword;
+        if (enterednetid == netid && enteredpassword == password)
+        {
+            login = true;
+            break;
+        }
+        else
+            cout << "Try again." << endl;
+    }
+    return login;
+}
+
+void GetAccountInfo(string &netid, string &password, string &firstName, string &lastName)
+{
+    ifstream accountfile;
+    accountfile.open("accountinfo.txt", ios::in);
+    accountfile >> netid >> password >> firstName >> lastName;
+    accountfile.close();
+
 }
