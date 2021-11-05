@@ -1,0 +1,3 @@
+/Users/npietrafesa/hackAD-2021/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/npietrafesa/hackAD-2021/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/npietrafesa/hackAD-2021/cmake-build-debug/CMakeFiles/hackAD_2021.dir
