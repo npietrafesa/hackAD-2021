@@ -14,6 +14,20 @@ private:
     bool isActive;
 public:
     User() {
+        isGiving = false;
+        isReceiving = false;
+        isActive = false;
+    }
+    string getFirstName() {
+        return firstName;
+    }
+    string getLastName() {
+        return lastName;
+    }
+    int getSwipes() {
+        return mealSwipes;
+    }
+    void createUser() {
         cout << "Enter First Name: " << endl;
         cin >> firstName;
         cout << "Enter Last Name: " << endl;
@@ -25,14 +39,9 @@ public:
         cout << "How many swipes do you have?" << endl;
         cin >> mealSwipes;
     }
-    string getFirstName() {
-        return firstName;
-    }
-    string getLastName() {
-        return lastName;
-    }
-    int getSwipes() {
-        return mealSwipes;
+    void changeSwipeAmount() {
+        cout << "How many meal swipes do you have?" << endl;
+        cin >> mealSwipes;
     }
     void printInfo() {
         cout << netid << " " << password << " " << firstName << " " << lastName << " " << mealSwipes << endl;
