@@ -87,3 +87,4 @@ void GetAccountInfo(string &netid, string &password, string &firstName, string &
     accountfile.close();
 
 }
+//aaaaa
